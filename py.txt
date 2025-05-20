@@ -1,0 +1,103 @@
+#Comentario con #
+
+"""comentarios por 
+bloques"""
+
+print("Impresion en consola")
+
+#input("Mensaje de ingreso ")
+
+#Creacion de una variable
+
+edad = 18
+
+print("edad:",edad)
+
+#Tipos de datos
+#int,float,double,boolean,str
+edad = 20
+
+print(type(edad))
+
+nombre = "Jhon"
+print(type(nombre))
+
+nombre = 3.1416
+print(type(nombre))
+
+nombre = True
+print(type(nombre))
+
+num1 = 5
+num2 = 4
+#Operadores matematicos
+#Suma +
+numSuma=num1+num2
+print("La suma es:",numSuma)
+#Resta -
+numResta=num1-num2
+print("La resta es:",numResta)
+#Multiplicacion *
+numMultiplicacion=num1*num2
+print("La multiplicacion es:",numMultiplicacion)
+#Division /
+numDivision=num1/num2
+print("La division es:",numDivision)
+#Modulo %
+numModulo=num1%num2
+print("El modulo es:",numModulo)
+#Exponente **
+numExponente=num1**num2
+print("La exponente es:",numExponente)
+
+numMultiplicacion*=num1
+print("La multiplicacion es:",numMultiplicacion)
+
+numDivision/=num1
+print("La division es:",numDivision)
+
+#Cadenas
+#type str
+cadena = "Hola"
+print(cadena)
+cadena2 = "desde Python"
+
+#Formas de unir cadenas
+#cadenaUnion = cadena+cadena2
+cadenaUnion = cadena+" "+cadena2
+print(cadenaUnion)
+
+cadenaUnion2=cadenaUnion.join([cadena2])
+print(cadenaUnion2)
+
+#Dividir una cadena
+#investigar sobre split
+
+
+#listas
+listaEdad = [18,20,25,45,85,45,20]
+
+#Tuplas - tipo de lista que no cambia sus valores internos
+tuplaColores = ("negro","magenta","rojo","verde","amarillo")
+
+#modificar valores en listas
+
+listaEdad[2] = "perro"
+
+print(listaEdad)
+
+#Diccionarios
+dic1={
+    "edad":3,
+    "nombre":"Carlos",
+    "tel":21715646,
+    "calificaciones":[2,0,3,3,5,3,9,0,9,2,9],
+    "materias":("algebra booleana",
+    "fisica cuantica",
+    "programacion",
+    "matematicas discretas",
+    "calculo 3")
+}
+
+print(dic1)
+print(dic1["calificaciones"])
