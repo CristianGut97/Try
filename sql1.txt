@@ -1,0 +1,31 @@
+-- create a table
+CREATE TABLE Libros (
+    ID INTEGER PRIMARY KEY,
+    Titulo TEXT NOT NULL,
+    Genero TEXT NOT NULL,
+    Ano_Publicacion DATE NOT NULL,
+    Autor_ID INTEGER NOT NULL
+);
+
+-- create a table
+CREATE TABLE Autores (
+    id INTEGER PRIMARY KEY,
+    Nombre TEXT NOT NULL,
+    Nacionalidad TEXT NOT NULL
+);
+
+INSERT INTO Libros VALUES (1, 'Tom Sawyer', 'DRAMA', '1850/01/01', 1);
+INSERT INTO Libros VALUES (2, 'Don Quijote', 'R.Magico', '1850/01/02', 2);
+INSERT INTO Libros VALUES (3, 'Ninguno', 'LoL', '1850/01/03', 3);
+INSERT INTO Libros VALUES (4, 'Voragine', 'Dramon', '1850/01/04', 3);
+INSERT INTO Libros VALUES (5, 'DosOrugitas', 'Enamoradas', '1850/01/05', 2);
+
+INSERT INTO Autores VALUES (1, 'Marck T', 'Americano');
+INSERT INTO Autores VALUES (2, 'Miguel de Cervantes', 'Español');
+INSERT INTO Autores VALUES (3, 'Jose Rivera', 'Colombiano');
+
+SELECT Autores.Nombre, COUNT(Libros.ID) as Cantidad_Libros
+from Libros
+JOIN Autores ON Libros.Autor_ID=Autores.ID
+GROUP by Autores.Nombre
+HAVING Cantidad_Libros
