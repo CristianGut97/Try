@@ -1,0 +1,43 @@
+
+db.libros.insertMany([
+    {
+        id : 1,
+        codigo : 001,
+        nombre : "Francisco",
+        autor : "Pedro",
+        editorial : "norma",
+        año : 1887
+    },
+    
+    {
+        id : 2,
+        codigo : 002,
+        nombre : "Domin",
+        autor : "Andres",
+        editorial : "bic",
+        año : 1895
+    }
+]);
+
+db.libros.insertOne({
+
+        id : 3,
+        codigo : 003,
+        nombre : "Roger",
+        autor : "Marco Antonio",
+        editorial : "CR",
+        año : 2001
+    
+});
+
+db.libros.find({año: 2001});
+
+//mayor que($gt)
+//mayor igual que($gte)
+//menor que ($lt)
+//menor o igual que ($lte)
+
+db.libros.find({año: {$gt:1887}});
+db.libros.find({año: {$gte:1887}});
+db.libros.find({año: {$lt:2001}});
+db.libros.find({año: {$lte:2001}});
