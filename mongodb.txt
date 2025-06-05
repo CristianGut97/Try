@@ -41,3 +41,14 @@ db.libros.find({año: {$gt:1887}});
 db.libros.find({año: {$gte:1887}});
 db.libros.find({año: {$lt:2001}});
 db.libros.find({año: {$lte:2001}});
+
+db.libros.updateOne(
+    {id:2},
+    {$set : {nombre: "El principito"}}
+);
+db.libros.find();
+
+db.libros.deleteOne({
+   id:2 
+});
+db.libros.find();
